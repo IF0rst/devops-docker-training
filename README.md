@@ -40,4 +40,13 @@ docker cp C:\Users\pablo\Desktop\docker-training\html web-serv:/usr/share/nginx/
 
 ## Question 4
 
-### a)
+### a) Chargement du dockerfile
+```bash
+docker build -t "custom-nginx" .
+```
+### b) Lancement du dockerfile
+```bash
+docker run -d -p 8080:80 --name mynginx custom-nginx
+```
+### c) Avantages et inconvénents mount vs cp
+Monter un volume permet de faire un lien direct entre le conteneur et la machine sur un fichier. Le fait d'avoir la modification en temps réel est à la fois un avantage et un inconvénient. La copie elle copie simplement un fichier/dossier dès son lancement. 
