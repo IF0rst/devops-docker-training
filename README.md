@@ -70,4 +70,19 @@ docker run -d --name "phpmyadmin" --network "database-net" -e PMA_HOST=mysql -p 
 Une fois le lancement des deux conteneurs et le lien par le biais du network réalisé, il est possible
 d'ajouter des tables depuis l'interface web.
 
-## Question 6
+## Question 6 
+
+### a) Description de docker-compose
+
+Docker compose est une commande qui prend un fichier yml en entrée. Dans ce fichier, nous donnons une liste de services (conteneurs) à créer ainsi que leur variables d'environnement local, réseaux et autres liens/informations.
+
+### b) Commandes de lancement et d'arrêt
+
+*Lancement*:
+```bash
+docker-compose up -d
+```
+*Arrêt*:
+```bash
+docker-compose down
+```
